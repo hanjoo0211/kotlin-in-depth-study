@@ -38,7 +38,7 @@ inline fun forEachInLineRun(a: IntArray, crossinline action: (Int) -> Unit) = ob
 
 fun main() {
     forEachInLineRun(intArrayOf(1, 2, 3, 4)) {
-        if (it < 2 || it > 3) return
+        if (it < 2 || it > 3) return@forEachInLineRun
         println(it)
     }
 }
